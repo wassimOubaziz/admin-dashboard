@@ -28,7 +28,7 @@ Effortlessly manage and monitor your data with this sleek and intuitive Admin Da
 
 ## License:
 
-This project is licensed under the [Your License] License - see the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the [Your License] License - see the [LICENSE](LICENSE) file for details.
 
 ## Contributing:
 
