@@ -36,6 +36,6 @@ Contributions are welcome! Feel free to open an issue or submit a pull request.
 
 ## Contact:
 
-Have questions or suggestions? Reach out to [Your Email] or open an issue.
+Have questions or suggestions? Reach out to [wassimdjaafar5@gmail.com] or open an issue.
 
 Take charge of your data with this powerful and elegant Admin Dashboard. Simplify administration tasks and make informed decisions effortlessly! 📊💻✨
