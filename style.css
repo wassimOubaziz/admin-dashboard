@@ -1,0 +1,374 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 280px 100fr;
+  height: 100vh;
+  width: 100%;
+  /*  overflow: hidden; */
+}
+
+header {
+  height: 100vh;
+  background-color: #277bff;
+  font-size: 19px;
+  color: rgba(255, 255, 255, 0.95);
+  padding: 20px 0px;
+  width: 280px;
+  display: block;
+
+  transition: width 0.1s;
+}
+
+/* header p {
+  opacity: 1;
+  transition: opacity 1s;
+} */
+
+header i {
+  font-size: 22px;
+}
+
+header .logo {
+  display: flex;
+  padding-bottom: 60px;
+  margin-left: 30px;
+}
+
+header i {
+  margin-right: 20px;
+}
+
+header .links ul li {
+  list-style: none;
+  margin-left: 15px;
+  margin-bottom: 5px;
+}
+
+header .links ul li a {
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.95);
+  width: 100%;
+  height: 50px;
+  padding-left: 15px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+
+header .links ul li a.active {
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.95);
+  width: 100%;
+  height: 50px;
+  padding-left: 15px;
+  border-radius: 50px 0px 0px 50px;
+  background-color: white;
+  color: #277bff;
+  position: relative;
+  z-index: 0;
+}
+
+header .links ul li a.active::before {
+  content: "";
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: transparent;
+  border-radius: 50%;
+  right: 0;
+  top: -100%;
+  z-index: -1;
+  box-shadow: 35px 35px 0px 10px white;
+}
+
+header .links ul li a.active::after {
+  content: "";
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: transparent;
+  border-radius: 50%;
+  right: 0;
+  top: 100%;
+  z-index: -1;
+  box-shadow: 35px -35px 0px 10px rgb(255, 255, 255);
+}
+/* phone design for links */
+
+/* @media only screen and (max-width: 1030px) {
+  
+} */
+
+article {
+  width: 100%;
+  margin: 10;
+  display: grid;
+  grid-template-columns: 0.1fr 10fr 0.1fr;
+  grid-template-rows: 0.13fr 1fr 3fr 13fr 0.13fr;
+  height: 100vh;
+  cursor: default;
+  position: relative;
+  z-index: 2;
+}
+
+article .nav {
+  grid-row: 2/3;
+  grid-column: 2/3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+article .nav img {
+  width: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+article .nav button {
+  border: none;
+  background-color: transparent;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+}
+
+article .nav button i {
+  font-size: 28px;
+}
+
+article .nav .inp {
+  position: relative;
+  max-width: 350px;
+  min-width: 200px;
+  display: flex;
+  align-items: center;
+  cursor: text;
+}
+
+article .nav .inp input {
+  height: 40px;
+  padding-left: 40px;
+  padding-right: 20px;
+  width: 100%;
+  border-radius: 20px;
+  border: 1.8px solid rgba(0, 0, 0, 0.4);
+  font-size: 20px;
+  cursor: text;
+}
+
+article .nav .inp i {
+  padding-left: 15px;
+  position: absolute;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.5);
+  cursor: text;
+}
+
+article .dash {
+  margin-top: 20px;
+  grid-column: 2/3;
+  grid-row: 3/4;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+/* under 1040px upper of  740px*/
+@media only screen and (max-width: 1040px) {
+  article .dash {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 440px) {
+  article .dash {
+    grid-template-columns: 1fr;
+  }
+
+  article .recent .recentOrders .orders,
+  article .recent .recentOrders .head,
+  article .recent .recentOrders .title {
+    width: 400px;
+  }
+
+  article .recentOrders {
+    overflow-x: auto;
+  }
+}
+
+article .dash .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px;
+  color: rgba(0, 0, 0, 0.35);
+  border-radius: 25px;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.03);
+}
+
+article .dash .container:hover {
+  background-color: #277bff;
+  color: white;
+}
+
+article .dash .container:hover h2 {
+  color: white;
+}
+
+article .dash .container h2 {
+  color: #277bff;
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+article .dash .container p {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+article .dash .container i {
+  font-size: 28px;
+}
+
+article .recent {
+  grid-column: 2/3;
+  grid-row: 4/5;
+  display: grid;
+  margin-top: 15px;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 20px;
+}
+
+@media only screen and (max-width: 740px) {
+  article .recent {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+
+article .recent .recentOrders {
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.05);
+}
+
+article .recent .recentOrders .head {
+  display: flex;
+  justify-content: space-between;
+  color: #277bff;
+  margin-bottom: 15px;
+}
+
+article .recent .recentOrders .head button {
+  background-color: #277bff;
+  border: none;
+  color: white;
+  padding: 7px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+article .recent .recentOrders .title {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 50px;
+  margin-bottom: 10px;
+}
+
+article .recent .recentOrders .title div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14.5px;
+}
+
+article .recent .recentOrders .orders {
+  height: auto;
+}
+
+article .recent .recentOrders .orders .order {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 50px;
+}
+
+article .recent .recentOrders .orders .order div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  padding: 8px 0px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+article .recent .recentOrders .orders hr {
+  border-color: rgba(0, 0, 0, 0.05);
+}
+
+article .recent .recentOrders .orders .order .pend,
+article .recent .recentOrders .orders .order .prog,
+article .recent .recentOrders .orders .order .retur,
+article .recent .recentOrders .orders .order .deliv {
+  padding: 2px 4px;
+  border-radius: 5px;
+  color: white;
+  background-color: #fdcb3f;
+  font-size: 13px;
+}
+
+article .recent .recentOrders .orders .order .prog {
+  background-color: #1a98d8;
+}
+
+article .recent .recentOrders .orders .order .retur {
+  background-color: #fb0800;
+}
+
+article .recent .recentOrders .orders .order .deliv {
+  background-color: #98dd31;
+}
+
+/* head */
+article .recent .recentCustomers {
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.05);
+}
+
+article .recent .recentCustomers h2 {
+  color: #277bff;
+  font-size: 24px;
+}
+
+article .recent .recentCustomers .customers .customer {
+  display: flex;
+  align-items: center;
+  padding: 6px 0px 6px 10px;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+article .recent .recentCustomers .customers .customer:hover {
+  background-color: #277bff;
+  border-radius: 5px;
+  color: white;
+}
+
+article .recent .recentCustomers .customers .customer img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
